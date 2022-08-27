@@ -34,13 +34,14 @@ public class ClienteController {
         return intClienteService.listar();
     }
     
-    @PostMapping(name="/creacliente")
+    @PostMapping("/creacliente")
     @ResponseStatus(HttpStatus.OK)
-    public void crearCliente( @RequestBody Cliente cliente){
+    public void crearCliente(@RequestBody Cliente cliente){
         intClienteService.guardar(cliente); 
     }
     
     @GetMapping("/kpideclientes")
+    @ResponseStatus(HttpStatus.OK)
     public String kpiCliente(){
         double promedio = intClienteService.promedioCliente();
         double desviacionEstandar = intClienteService.desviacionCliente();

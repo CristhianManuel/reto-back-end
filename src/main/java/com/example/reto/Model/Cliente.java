@@ -4,6 +4,7 @@
  */
 package com.example.reto.Model;
 
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import javax.persistence.Column;
@@ -12,7 +13,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotEmpty;
 import lombok.Data;
 
 /**
@@ -31,19 +31,15 @@ public class Cliente implements Serializable{
     
     
     @Column(name="nombre")
-    @NotEmpty()
     String nombre;
-    
+ 
     @Column(name="apellido")
-    @NotEmpty()
     String apellido;
     
     @Column(name="edad")
-    @NotEmpty()
     Integer edad;
     
     @Column(name="fecha_nacimiento")
-    @NotEmpty()
     LocalDate fecha_nacimiento;
     
 }
